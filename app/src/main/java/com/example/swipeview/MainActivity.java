@@ -32,6 +32,9 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mToolbar = findViewById(R.id.toolBar);
+        setSupportActionBar(mToolbar);
+
         mList = new ArrayList<>();
         mList.add(new Model(R.drawable.pic1 , "Velvet Blazer" , "Price : 2,500"));
         mList.add(new Model(R.drawable.pic2 , "Velvet Blazer" , "Price : 3000"));

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity
     private Integer[] color = null;
     private ArgbEvaluator mArgbEvaluator = new ArgbEvaluator();
     private List<Model> mList;
-    private Toolbar mToolbar;
+
 
 
     @Override
@@ -31,9 +32,6 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mToolbar = findViewById(R.id.toolBar);
-        setSupportActionBar(mToolbar);
 
         mList = new ArrayList<>();
         mList.add(new Model(R.drawable.pic1 , "Velvet Blazer" , "Price : 2,500"));
@@ -114,11 +112,29 @@ public class MainActivity extends AppCompatActivity
        });
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_items , menu);
-        return super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu_items , menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        if (item.getItemId() == R.id.findFriends)
+        {
+
+        }
+        if (item.getItemId() == R.id.settings)
+        {
+
+        }
+        if (item.getItemId() == R.id.logOut)
+        {
+
+        }
+        return true;
     }
 }

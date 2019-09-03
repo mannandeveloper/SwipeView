@@ -3,9 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/search"
+        android:id="@+id/findFriends"
+        android:title="Find Friends"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/settings"
         android:title="Search"
-        android:icon="@drawable/ic_search_icon"
-        app:showAsAction="always"/>
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/logOut"
+        android:title="Search"
+        app:showAsAction="never"/>
+
 
 </menu>
